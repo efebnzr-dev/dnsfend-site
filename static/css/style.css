@@ -915,6 +915,22 @@ main {
     color: #fff;
     margin-top: 8px;
 }
+
+.stat-cardv2 {
+     background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.8rem;
+    border-radius: 12px;
+    text-align: center;
+    min-width: 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: transform 0.4s, background 0.3s, box-shadow 0.3s;
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 900px) {
     .stats-grid {
         flex-direction: column;
