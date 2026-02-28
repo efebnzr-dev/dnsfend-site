@@ -925,7 +925,7 @@ main {
     text-align: center;
     min-width: 0;
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    transition: transform 0.4s, background 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
     transform: translateY(-5px);
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);

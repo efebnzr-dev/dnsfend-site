@@ -60,23 +60,30 @@ function animateStats() {
     const statNumbers = document.querySelectorAll('.stat-number');
     statNumbers.forEach(stat => {
         const target = +stat.getAttribute('data-target');
-        let start = 0;
         let duration = 2000;
-        let step = Math.max(1, Math.floor(target / (duration / 16)));
+        let startTime = null;
         let prefix = '';
         let suffix = '';
         if (stat.textContent.includes('$')) prefix = '$ ';
         if (stat.textContent.includes('%')) suffix = ' %';
-        function update() {
-            start += step;
-            if (start >= target) {
-                stat.textContent = prefix + formatNumberShort(target) + suffix;
-            } else {
-                stat.textContent = prefix + formatNumberShort(start) + suffix;
+        
+        function update(timestamp) {
+            if (!startTime) startTime = timestamp;
+            const elapsed = timestamp - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Kolaylaştırıcı / hızlandırıcı bir easing (EaseOut) isterseniz:
+            // const easeOutProgress = 1 - Math.pow(1 - progress, 3);
+            const current = Math.floor(progress * target);
+            
+            if (progress < 1) {
+                stat.textContent = prefix + formatNumberShort(current) + suffix;
                 requestAnimationFrame(update);
+            } else {
+                stat.textContent = prefix + formatNumberShort(target) + suffix;
             }
         }
-        update();
+        requestAnimationFrame(update);
     });
 }
 document.addEventListener('DOMContentLoaded', animateStats);
