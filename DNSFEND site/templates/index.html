@@ -1,0 +1,181 @@
+﻿{% extends "base.html" %}
+
+{% block title %}Home - DNSFEND | DNS Threat Detection & Protection{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Secure Your Digital Assets</h1>
+        <h2 style="display: flex; align-items: center; gap: 0.3em; justify-content: center;">
+            Meet
+            <img src="/static/logos/logo2.svg" alt="DNSFEND Logo" style="height: 1em; vertical-align: middle;">
+        </h2>
+    <p>Cyber threats are increasing every day, making it more important than ever for organizations to protect their
+        digital infrastructures. DNSFEND delivers a powerful DNS security solution, providing comprehensive protection
+        against cyberattacks.</p>
+    <button class="btn" onclick="document.getElementById('contact').scrollIntoView()">Contact Us</button>
+</section>
+
+    <!-- Animated Statistics Section -->
+    <section class="stats-section">
+        <div class="container stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" data-target="5000000">$ 0</div>
+                <div class="stat-label">Average cost of a data breach</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-target="72">0 %</div>
+                <div class="stat-label">Increase in data breaches since 2023</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-target="12000000000000">$ 0</div>
+                <div class="stat-label">Projected cost of cyber crime in 2025</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-target="10000000000">$ 0</div>
+                <div class="stat-label">Cost of cyber fraud losses / year</div>
+            </div>
+        </div>
+    </section>
+
+<section class="why-dns-security">
+    <div class="container" id="why-dns-security">
+        <h2>Why DNS Security Matters</h2>
+        <br>
+        <div class="threat-grid">
+            <div class="threat-item">
+                <h3>As organizations move forward with digitalization, internet security has become more important than
+                    ever.</h3>
+                <p>As organizations take major steps toward digital transformation, internet security has become more
+                    important than ever.
+
+                    Employees access company resources, accounting and finance software, ERP, SAP, CRM, and other
+                    critical systems over the internet.
+                    <br>
+                    <br>
+                    However, during this process, the number of cyber threats faced by organizations is rapidly
+                    increasing. These threats bring risks such as data breaches, system disruptions, and the compromise
+                    of corporate networks, laboratory environments, and user data through malicious software.
+                    <br>
+                    <br>
+                    Providing a secure and uninterrupted digital experience is no longer a luxury it is a
+                    <b>necessity</b>.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="dns-based-cyber-attacks">
+    <div class="container" id=why-dns-security>
+        <h2 id="core-features">DNS-Based Cyber Threats</h2>
+        <p>
+            DNS plays a vital role in managing internet traffic and unfortunately becomes a target for many cyber
+            attacks.
+            If DNS attacks are not prevented, they put your network security and personal data at risk.
+        </p>
+
+        <div class="threat-cards">
+            <div class="threat-item">
+                <h3>DNS Tunneling Attacks</h3>
+                <p>
+                    Cybercriminals use DNS tunneling to transport malicious data and enable data theft. This technique
+                    exploits DNS to exfiltrate sensitive information from your network.
+                </p>
+            </div>
+
+            <div class="threat-item">
+                <h3>DNS Poisoning</h3>
+                <p>
+                    DNS poisoning redirects users to fraudulent websites to steal credentials. Users are deceived into
+                    visiting fake sites that appear legitimate.
+                </p>
+            </div>
+
+            <div class="threat-item">
+                <h3>Phishing Attacks</h3>
+                <p>
+                    Phishing attacks lure users to deceptive websites to obtain personal information. These targeted
+                    attacks
+                    often appear to come from trusted sources.
+                </p>
+            </div>
+
+            <div class="threat-item">
+                <h3>Botnet Command & Control</h3>
+                <p>
+                    Compromised machines communicate with command and control servers. DNSFEND blocks these
+                    communications
+                    before they can cause damage.
+                </p>
+            </div>
+
+            <div class="threat-item">
+                <h3>Malware Distribution</h3>
+                <p>
+                    Malware-hosting servers use DNS to deliver infections. We block access to known malware distribution
+                    points.
+                </p>
+            </div>
+
+            <div class="threat-item">
+                <h3>Ransomware Attacks</h3>
+                <p>
+                    Ransomware uses DNS to contact command centers. DNSFEND prevents communication and stops infections
+                    early.
+                </p>
+            </div>
+        </div>
+</section>
+
+<section class="how-dnsfend-works">
+    <div class="container">
+        <h2>How DNSFEND Works</h2>
+        <div class="features-table-grid">
+            <div class="features-table-card">
+                <div class="features-table-icon"></div>
+                <h3>DNS Request Scanning</h3>
+                <p>DNSFEND analyzes all incoming DNS requests in real-time, detecting any malicious or suspicious requests as they occur.</p>
+            </div>
+            <div class="features-table-card">
+                <div class="features-table-icon"></div>
+                <h3>Threat Detection & Blocking</h3>
+                <p>When malicious content is detected, the system immediately takes action, blocking these requests and protecting users from reaching unsafe sites.</p>
+            </div>
+            <div class="features-table-card">
+                <div class="features-table-icon"></div>
+                <h3>Reporting & Monitoring</h3>
+                <p>Detected threats are recorded in detail and monitored through a centralized management dashboard, allowing continuous security assessment.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-preview features-table">
+    <div class="container" style="color: white;">
+        <h2 style="color: white;">What is DNSFEND?</h2>
+        <p style="color: white;">
+            Cyber threats are increasing every day, and protecting organizations' digital infrastructure has become more
+            important than ever.
+            DNSFEND provides comprehensive protection against cyber attacks by offering DNS security solutions to
+            organizations.
+        </p>
+        <p style="color: white;">
+            DNSFEND analyzes DNS queries and responses to identify malicious domain names such as command and control
+            servers, botnets, and phishing sites.
+        </p>
+        <a href="/about" class="btn btn-primary">Learn More About DNSFEND</a>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Get Started Today</h2>
+        <p>Contact us to learn how DNSFEND can protect your organization</p>
+        <form id="contactForm">
+            <input type="email" id="email" placeholder="Your Email" required>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+        <div id="response"></div>
+    </div>
+</section>
+{% endblock %}
