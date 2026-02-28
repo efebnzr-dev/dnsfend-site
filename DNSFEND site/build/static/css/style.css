@@ -1,0 +1,923 @@
+/* Features section renkleri */
+.features-section {
+    background: linear-gradient(135deg, #2b3990 0%, #1c75bc 100%);
+    color: #fff;
+    border-radius: 16px;
+    margin: 2rem 0;
+    padding: 2rem 0;
+}
+.features-section .features-group-title {
+    color: #fff;
+}
+.features-section .features-table-card {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    border-radius: 12px;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 2px 12px rgba(43,57,144,0.08);
+}
+/* Genel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--bg);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+:root {
+    --primary: #2b3990;
+    --secondary: #1c75bc;
+    --bg: #f4f4f4;
+    --text: #333333;
+}
+
+/* Navigasyon */
+.navbar {
+    background-color: #ffffff;
+    padding: 1.2rem 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+}
+
+.logo {
+    margin-left: 0;
+    transform: translateX(-100px);
+    will-change: transform;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.logo-img {
+    height: 32px;
+    width: auto;
+    display: block;
+    margin: 0 0 0 8px;
+    padding: 0;
+}
+
+/* Menu layout tweaks */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu a {
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.menu a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: var(--secondary);
+}
+
+/* Main Content */
+main {
+    min-height: calc(100vh - 200px);
+    padding: 2rem 0;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 2.5rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.hero p {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+}
+
+/* Butonlar */
+.btn {
+    background-color: var(--secondary);
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--primary);
+}
+
+/* Özellikler */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #1c75bc 0%, #2b3990 100%);
+    padding: 3rem;
+    border-radius: 10px;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* İletişim Formu */
+.contact {
+    background: white;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+}
+
+.contact h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact input,
+.contact textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 5px rgba(28, 117, 188, 0.2);
+}
+
+#response {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    display: none;
+}
+
+#response.success {
+    background-color: #d4edda;
+    color: #155724;
+    display: block;
+}
+
+#response.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    display: block;
+}
+
+/* Hakkında Sayfası */
+.btn {
+    background-color: var(--secondary);
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--primary);
+}
+
+.about-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.about-content ul,
+.about-content ol {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-content li {
+    margin-bottom: 0.5rem;
+}
+
+.about-content code {
+    background-color: #f4f4f4;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+}
+
+.about-content pre {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+}
+
+/* Features List */
+.features-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.feature-item {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary);
+}
+
+.feature-item h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.feature-item p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Attack Vectors */
+.attack-vectors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.attack-card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.attack-card h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.attack-card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* About Preview */
+.about-preview {
+    background: white;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.about-preview h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.about-preview p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+/* Why DNS Security Section */
+.why-dns-security {
+    padding: 3rem;
+    background: linear-gradient(135deg, #1c75bc 0%, #2b3990 100%);
+    margin-bottom: 3rem;
+    border-radius: 10px;
+}
+
+.why-dns-security h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.why-dns-security p {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #f0f0f0;
+}
+
+/* DNS-Based Cyber Attacks Section */
+.dns-based-cyber-attacks {
+    padding: 3rem;
+    background: linear-gradient(135deg, #1c75bc 0%, #2b3990 100%);
+    margin-bottom: 3rem;
+    border-radius: 10px;
+}
+
+.dns-based-cyber-attacks h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.dns-based-cyber-attacks p {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #f0f0f0;
+}
+
+/* How DNSFEND Works Section */
+.how-dnsfend-works {
+    padding: 3rem;
+    background: linear-gradient(135deg, #1c75bc 0%, #2b3990 100%);
+    margin-bottom: 3rem;
+    border-radius: 10px;
+}
+
+.how-dnsfend-works h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.how-dnsfend-works p {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #f0f0f0;
+}
+
+/* Customized Solutions Section */
+.customized-solutions {
+    padding: 3rem;
+    background: linear-gradient(135deg, #1c75bc 0%, #2b3990 100%);
+    margin-bottom: 3rem;
+    border-radius: 10px;
+}
+
+.customized-solutions h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.customized-solutions p {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #f0f0f0;
+}
+
+/* Real-Time Threat Detection Section */
+.real-time-threat-detection {
+    padding: 3rem;
+    background: linear-gradient(135deg, #1c75bc 0%, #2b3990 100%);
+    margin-bottom: 3rem;
+    border-radius: 10px;
+}
+
+.real-time-threat-detection h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.real-time-threat-detection p {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #f0f0f0;
+}
+
+/* Secure Internet Experience Section */
+.secure-internet-experience {
+    padding: 3rem;
+    background: linear-gradient(135deg, #1c75bc 0%, #2b3990 100%);
+    margin-bottom: 3rem;
+    border-radius: 10px;
+}
+
+.secure-internet-experience h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.secure-internet-experience p {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #f0f0f0;
+}
+
+/* Centralized Management and Reporting Section */
+.centralized-management-reporting {
+    padding: 3rem;
+    background: linear-gradient(135deg, #1c75bc 0%, #2b3990 100%);
+    margin-bottom: 3rem;
+    border-radius: 10px;
+}
+
+.centralized-management-reporting h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.centralized-management-reporting p {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #f0f0f0;
+}
+
+/* Compliance and Legal Regulations Section */
+.compliance-legal-regulations {
+    padding: 3rem;
+    background: linear-gradient(135deg, #1c75bc 0%, #2b3990 100%);
+    margin-bottom: 3rem;
+    border-radius: 10px;
+}
+
+.compliance-legal-regulations h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.compliance-legal-regulations p {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #f0f0f0;
+}
+
+/* Features Table Section */
+.features-table {
+    padding: 3rem;
+    background: linear-gradient(135deg, #1c75bc 0%, #2b3990 100%);
+    margin-bottom: 3rem;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.features-table h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.features-table-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 2.5rem;
+}
+
+.features-table-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.features-table-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.8rem;
+    border-radius: 12px;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+.features-table-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.features-table-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.features-table-card h3 {
+    color: white;
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.features-table-card p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.features-group-title {
+    grid-column: 1 / -1;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 992px) {
+    .features-table-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .features-table-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.threat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.why-dns-security .threat-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.threat-item {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.8rem;
+    border-radius: 12px;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+.threat-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.threat-item h3 {
+    color: white;
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.threat-item p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Threat Cards */
+.threat-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.threat-card {
+    background: linear-gradient(135deg, #e6e4e2 100%);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #2b3990;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.threat-card h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.threat-card p {
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Process Steps */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 3rem 0;
+}
+
+.step {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.step h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.step p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Features List */
+.features-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.feature-item {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary);
+}
+
+.feature-item h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.feature-item p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.benefit {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    padding: 2rem;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.benefit h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.benefit p {
+    font-size: 0.9rem;
+    opacity: 0.95;
+}
+
+/* Feature Grid on Home */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+#core-features {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: white;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--secondary);
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary);
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .about h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Animated Statistics Section Styles */
+.stats-section {
+    padding: 3rem;
+    background: linear-gradient(135deg, #1c75bc 0%, #2b3990 100%);
+    margin-bottom: 3rem;
+    border-radius: 10px;
+}
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+.stat-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.8rem;
+    border-radius: 12px;
+    text-align: center;
+    min-width: 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+.stat-number {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+.stat-label {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-top: 8px;
+}
+@media (max-width: 900px) {
+    .stats-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
