@@ -3,33 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>{% block title %}DNSFEND - DNS Threat Detection & Protection{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <a href="/"><img src="{{ url_for('static', filename='logos/LOGO_2.svg') }}" alt="DNSFEND Logo" class="logo-img"></a>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <a href="https://www.dnsfend.com" target="_blank"><i class="fas fa-globe"></i> www.dnsfend.com</a>
             </div>
+            <div class="top-bar-right">
+                <a href="mailto:info@dnsfend.com"><i class="fas fa-envelope"></i> info@dnsfend.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-inner">
+            <div class="logo">
+                <a href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='logos/LOGO_2.svg') }}" alt="DNSFEND Logo" class="logo-img">
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
             <ul class="menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/features">Features</a></li>
-                <li><a href="/#contact">Contact</a></li>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('features') }}">Features</a></li>
+                <li><a href="{{ url_for('index') }}#contact" class="btn-nav">Contact Us</a></li>
             </ul>
         </div>
     </nav>
 
-    <main class="container">
+    <main>
         {% block content %}{% endblock %}
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 DNSFEND. DNS Threat Detection & Protection. All rights reserved.</p>
-            <p><a href="https://www.dnsfend.com" target="_blank">www.dnsfend.com</a></p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="{{ url_for('static', filename='logos/LOGO_2.svg') }}" alt="DNSFEND Logo" class="footer-logo">
+                    <p class="footer-desc">Advanced DNS Threat Detection & Protection for modern organizations. Stay ahead of cyber threats with proactive DNS security.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="{{ url_for('about') }}">About Us</a></li>
+                        <li><a href="{{ url_for('features') }}">Features</a></li>
+                        <li><a href="{{ url_for('index') }}#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="{{ url_for('features') }}">Protective DNS</a></li>
+                        <li><a href="{{ url_for('features') }}">Threat Detection</a></li>
+                        <li><a href="{{ url_for('features') }}">Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> info@dnsfend.com</p>
+                    <p><i class="fas fa-globe"></i> www.dnsfend.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 DNSFEND. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 

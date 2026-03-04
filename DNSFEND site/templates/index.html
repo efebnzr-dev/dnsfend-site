@@ -3,179 +3,322 @@
 {% block title %}Home - DNSFEND | DNS Threat Detection & Protection{% endblock %}
 
 {% block content %}
+<!-- Hero Section - HYAS Style -->
 <section class="hero">
-    <h1>Secure Your Digital Assets</h1>
-        <h2 style="display: flex; align-items: center; gap: 0.3em; justify-content: center;">
-            Meet
-            <img src="/static/logos/logo2.svg" alt="DNSFEND Logo" style="height: 1em; vertical-align: middle;">
-        </h2>
-    <p>Cyber threats are increasing every day, making it more important than ever for organizations to protect their
-        digital infrastructures. DNSFEND delivers a powerful DNS security solution, providing comprehensive protection
-        against cyberattacks.</p>
-    <button class="btn" onclick="document.getElementById('contact').scrollIntoView()">Contact Us</button>
+    <div class="container hero-inner">
+        <div class="hero-content">
+            <span class="hero-badge">PROTECTIVE DNS SECURITY</span>
+            <h1>Secure Your Digital Infrastructure Against DNS Threats</h1>
+            <p>Cyber threats are increasing every day, making it more important than ever for organizations to protect their digital infrastructures. DNSFEND delivers a powerful DNS security solution, providing comprehensive protection against cyberattacks.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Contact Us</a>
+                <a href="{{ url_for('about') }}" class="btn btn-outline">Why DNSFEND <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-graphic">
+                <div class="hero-shield">
+                    <i class="fas fa-shield-halved"></i>
+                </div>
+                <div class="hero-orbit hero-orbit-1"></div>
+                <div class="hero-orbit hero-orbit-2"></div>
+                <div class="hero-orbit hero-orbit-3"></div>
+                <div class="floating-icon fi-1"><i class="fas fa-lock"></i></div>
+                <div class="floating-icon fi-2"><i class="fas fa-server"></i></div>
+                <div class="floating-icon fi-3"><i class="fas fa-network-wired"></i></div>
+                <div class="floating-icon fi-4"><i class="fas fa-bug-slash"></i></div>
+            </div>
+        </div>
+    </div>
 </section>
 
-    <!-- Animated Statistics Section -->
-    <section class="stats-section">
-        <div class="container stats-grid">
-            <div class="stat-card">
+<!-- Experts Section -->
+<section class="experts-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Experts in DNS Security Infrastructure</h2>
+            <p>Your adversary utilizes various Internet infrastructure, devices, and assets to conduct their malicious activities. As experts in DNS security, DNSFEND not only sees what they are doing but keeps you one step ahead.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Animated Statistics Section -->
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card" data-aos="fade-up">
                 <div class="stat-number" data-target="5000000">$ 0</div>
                 <div class="stat-label">Average cost of a data breach</div>
             </div>
-            <div class="stat-card">
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="stat-number" data-target="72">0 %</div>
                 <div class="stat-label">Increase in data breaches since 2023</div>
             </div>
-            <div class="stat-card">
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="stat-number" data-target="12000000000000">$ 0</div>
                 <div class="stat-label">Projected cost of cyber crime in 2025</div>
             </div>
-            <div class="stat-card">
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
                 <div class="stat-number" data-target="10000000000">$ 0</div>
                 <div class="stat-label">Cost of cyber fraud losses / year</div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-<section class="why-dns-security">
-    <div class="container" id="why-dns-security">
-        <h2>Why DNS Security Matters</h2>
-        <br>
-        <div class="threat-grid">
-            <div class="threat-item">
-                <h3>As organizations move forward with digitalization, internet security has become more important than
-                    ever.</h3>
-                <p>As organizations take major steps toward digital transformation, internet security has become more
-                    important than ever.
-
-                    Employees access company resources, accounting and finance software, ERP, SAP, CRM, and other
-                    critical systems over the internet.
-                    <br>
-                    <br>
-                    However, during this process, the number of cyber threats faced by organizations is rapidly
-                    increasing. These threats bring risks such as data breaches, system disruptions, and the compromise
-                    of corporate networks, laboratory environments, and user data through malicious software.
-                    <br>
-                    <br>
-                    Providing a secure and uninterrupted digital experience is no longer a luxury it is a
-                    <b>necessity</b>.
-                </p>
+<!-- Products Section - HYAS Style Tabs -->
+<section class="products-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>DNSFEND Products</h2>
+            <p>DNSFEND security solutions provide the visibility and observability needed to stay in control of your environment. Easy to deploy, easy to manage, and integrates seamlessly into any security stack.</p>
+        </div>
+        <div class="product-tabs">
+            <button class="product-tab active" data-tab="protect">
+                <i class="fas fa-shield-halved"></i>
+                <span>Protective DNS</span>
+            </button>
+            <button class="product-tab" data-tab="detect">
+                <i class="fas fa-magnifying-glass"></i>
+                <span>Threat Detection</span>
+            </button>
+            <button class="product-tab" data-tab="monitor">
+                <i class="fas fa-chart-line"></i>
+                <span>Monitoring & Reporting</span>
+            </button>
+        </div>
+        <div class="product-panels">
+            <div class="product-panel active" id="panel-protect">
+                <div class="product-panel-content">
+                    <span class="product-label">PROTECTIVE DNS</span>
+                    <h3>DNSFEND Protect</h3>
+                    <p>Our protective DNS solution combines authoritative knowledge of attacker infrastructure and domain-based intelligence to proactively block malicious communication used by cybercriminals to conduct phishing, ransomware, and other forms of cyberattacks.</p>
+                    <a href="{{ url_for('features') }}" class="btn btn-link">Explore DNSFEND Protect <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="product-panel-visual">
+                    <div class="product-mockup">
+                        <div class="mockup-header">
+                            <span class="mockup-dot red"></span>
+                            <span class="mockup-dot yellow"></span>
+                            <span class="mockup-dot green"></span>
+                            <span class="mockup-title">DNSFEND Dashboard</span>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="mockup-stat-row">
+                                <div class="mockup-stat"><span class="ms-num">2.4M</span><span class="ms-label">Queries Analyzed</span></div>
+                                <div class="mockup-stat"><span class="ms-num">18.7K</span><span class="ms-label">Threats Blocked</span></div>
+                                <div class="mockup-stat"><span class="ms-num">99.9%</span><span class="ms-label">Uptime</span></div>
+                            </div>
+                            <div class="mockup-chart">
+                                <div class="chart-bar" style="height: 40%"></div>
+                                <div class="chart-bar" style="height: 65%"></div>
+                                <div class="chart-bar" style="height: 45%"></div>
+                                <div class="chart-bar" style="height: 80%"></div>
+                                <div class="chart-bar" style="height: 55%"></div>
+                                <div class="chart-bar" style="height: 70%"></div>
+                                <div class="chart-bar" style="height: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-panel" id="panel-detect">
+                <div class="product-panel-content">
+                    <span class="product-label">THREAT DETECTION</span>
+                    <h3>DNSFEND Detect</h3>
+                    <p>DNSFEND analyzes DNS queries and responses to identify malicious domain names such as command and control servers, botnets, and phishing sites. Real-time detection ensures threats are neutralized before they can impact your organization.</p>
+                    <a href="{{ url_for('features') }}" class="btn btn-link">Explore DNSFEND Detect <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="product-panel-visual">
+                    <div class="product-mockup">
+                        <div class="mockup-header">
+                            <span class="mockup-dot red"></span>
+                            <span class="mockup-dot yellow"></span>
+                            <span class="mockup-dot green"></span>
+                            <span class="mockup-title">Threat Intelligence</span>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="mockup-threat-list">
+                                <div class="mockup-threat-item blocked"><i class="fas fa-ban"></i> malware-c2.example.com <span>BLOCKED</span></div>
+                                <div class="mockup-threat-item blocked"><i class="fas fa-ban"></i> phishing-site.fake.net <span>BLOCKED</span></div>
+                                <div class="mockup-threat-item safe"><i class="fas fa-check-circle"></i> legitimate-site.com <span>SAFE</span></div>
+                                <div class="mockup-threat-item blocked"><i class="fas fa-ban"></i> botnet-relay.evil.org <span>BLOCKED</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-panel" id="panel-monitor">
+                <div class="product-panel-content">
+                    <span class="product-label">MONITORING & REPORTING</span>
+                    <h3>DNSFEND Monitor</h3>
+                    <p>Detected threats are recorded in detail and monitored through a centralized management dashboard, allowing continuous security assessment. Get comprehensive reports on internet traffic, threat detection, and security status.</p>
+                    <a href="{{ url_for('features') }}" class="btn btn-link">Explore DNSFEND Monitor <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="product-panel-visual">
+                    <div class="product-mockup">
+                        <div class="mockup-header">
+                            <span class="mockup-dot red"></span>
+                            <span class="mockup-dot yellow"></span>
+                            <span class="mockup-dot green"></span>
+                            <span class="mockup-title">Analytics Dashboard</span>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="mockup-stat-row">
+                                <div class="mockup-stat"><span class="ms-num">156</span><span class="ms-label">Reports Generated</span></div>
+                                <div class="mockup-stat"><span class="ms-num">24/7</span><span class="ms-label">Monitoring</span></div>
+                            </div>
+                            <div class="mockup-chart">
+                                <div class="chart-bar accent" style="height: 50%"></div>
+                                <div class="chart-bar accent" style="height: 75%"></div>
+                                <div class="chart-bar accent" style="height: 60%"></div>
+                                <div class="chart-bar accent" style="height: 85%"></div>
+                                <div class="chart-bar accent" style="height: 70%"></div>
+                                <div class="chart-bar accent" style="height: 95%"></div>
+                                <div class="chart-bar accent" style="height: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="dns-based-cyber-attacks">
-    <div class="container" id=why-dns-security>
-        <h2 id="core-features">DNS-Based Cyber Threats</h2>
-        <p>
-            DNS plays a vital role in managing internet traffic and unfortunately becomes a target for many cyber
-            attacks.
-            If DNS attacks are not prevented, they put your network security and personal data at risk.
-        </p>
-
-        <div class="threat-cards">
-            <div class="threat-item">
-                <h3>DNS Tunneling Attacks</h3>
-                <p>
-                    Cybercriminals use DNS tunneling to transport malicious data and enable data theft. This technique
-                    exploits DNS to exfiltrate sensitive information from your network.
-                </p>
+<!-- DNS Threats Section -->
+<section class="threats-section">
+    <div class="container">
+        <div class="section-header light">
+            <h2>DNS-Based Cyber Threats</h2>
+            <p>DNS plays a vital role in managing internet traffic and unfortunately becomes a target for many cyberattacks. If DNS attacks are not prevented, they put your network security and personal data at risk.</p>
+        </div>
+        <div class="threats-grid">
+            <div class="threat-card" data-aos="fade-up">
+                <div class="threat-icon"><i class="fas fa-filter"></i></div>
+                <h3>DNS Tunneling</h3>
+                <p>Cybercriminals use DNS tunneling to transport malicious data and enable data theft. This technique exploits DNS to exfiltrate sensitive information.</p>
             </div>
-
-            <div class="threat-item">
+            <div class="threat-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="threat-icon"><i class="fas fa-skull-crossbones"></i></div>
                 <h3>DNS Poisoning</h3>
-                <p>
-                    DNS poisoning redirects users to fraudulent websites to steal credentials. Users are deceived into
-                    visiting fake sites that appear legitimate.
-                </p>
+                <p>DNS poisoning redirects users to fraudulent websites to steal credentials. Users are deceived into visiting fake sites that appear legitimate.</p>
             </div>
-
-            <div class="threat-item">
+            <div class="threat-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="threat-icon"><i class="fas fa-fish"></i></div>
                 <h3>Phishing Attacks</h3>
-                <p>
-                    Phishing attacks lure users to deceptive websites to obtain personal information. These targeted
-                    attacks
-                    often appear to come from trusted sources.
-                </p>
+                <p>Phishing attacks lure users to deceptive websites to obtain personal information. These targeted attacks often appear to come from trusted sources.</p>
             </div>
-
-            <div class="threat-item">
+            <div class="threat-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="threat-icon"><i class="fas fa-robot"></i></div>
                 <h3>Botnet Command & Control</h3>
-                <p>
-                    Compromised machines communicate with command and control servers. DNSFEND blocks these
-                    communications
-                    before they can cause damage.
-                </p>
+                <p>Compromised machines communicate with command and control servers. DNSFEND blocks these communications before they can cause damage.</p>
             </div>
-
-            <div class="threat-item">
+            <div class="threat-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="threat-icon"><i class="fas fa-virus"></i></div>
                 <h3>Malware Distribution</h3>
-                <p>
-                    Malware-hosting servers use DNS to deliver infections. We block access to known malware distribution
-                    points.
-                </p>
+                <p>Malware-hosting servers use DNS to deliver infections. We block access to known malware distribution points proactively.</p>
             </div>
-
-            <div class="threat-item">
+            <div class="threat-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="threat-icon"><i class="fas fa-lock"></i></div>
                 <h3>Ransomware Attacks</h3>
-                <p>
-                    Ransomware uses DNS to contact command centers. DNSFEND prevents communication and stops infections
-                    early.
-                </p>
-            </div>
-        </div>
-</section>
-
-<section class="how-dnsfend-works">
-    <div class="container">
-        <h2>How DNSFEND Works</h2>
-        <div class="features-table-grid">
-            <div class="features-table-card">
-                <div class="features-table-icon"></div>
-                <h3>DNS Request Scanning</h3>
-                <p>DNSFEND analyzes all incoming DNS requests in real-time, detecting any malicious or suspicious requests as they occur.</p>
-            </div>
-            <div class="features-table-card">
-                <div class="features-table-icon"></div>
-                <h3>Threat Detection & Blocking</h3>
-                <p>When malicious content is detected, the system immediately takes action, blocking these requests and protecting users from reaching unsafe sites.</p>
-            </div>
-            <div class="features-table-card">
-                <div class="features-table-icon"></div>
-                <h3>Reporting & Monitoring</h3>
-                <p>Detected threats are recorded in detail and monitored through a centralized management dashboard, allowing continuous security assessment.</p>
+                <p>Ransomware uses DNS to contact command centers. DNSFEND prevents communication and stops infections early.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="about-preview features-table">
-    <div class="container" style="color: white;">
-        <h2 style="color: white;">What is DNSFEND?</h2>
-        <p style="color: white;">
-            Cyber threats are increasing every day, and protecting organizations' digital infrastructure has become more
-            important than ever.
-            DNSFEND provides comprehensive protection against cyber attacks by offering DNS security solutions to
-            organizations.
-        </p>
-        <p style="color: white;">
-            DNSFEND analyzes DNS queries and responses to identify malicious domain names such as command and control
-            servers, botnets, and phishing sites.
-        </p>
-        <a href="/about" class="btn btn-primary">Learn More About DNSFEND</a>
+<!-- Solutions Section - HYAS Style -->
+<section class="solutions-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>DNSFEND Solutions</h2>
+            <p>DNSFEND empowers organizations with advanced threat intelligence and innovative technologies to proactively identify, investigate, and mitigate cyber threats.</p>
+        </div>
+        <div class="solutions-grid">
+            <div class="solution-card" data-aos="fade-up">
+                <div class="solution-icon"><i class="fas fa-building-shield"></i></div>
+                <h3>Enterprise DNS Protection</h3>
+                <p>Comprehensive DNS security solutions for large organizations. Protect all endpoints and ensure safe internet access across your entire infrastructure.</p>
+                <a href="{{ url_for('features') }}" class="solution-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="solution-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="solution-icon"><i class="fas fa-user-shield"></i></div>
+                <h3>Threat Investigation</h3>
+                <p>Our threat investigation solution is expertly designed to swiftly identify, analyze, and respond to security incidents to safeguard your digital infrastructure.</p>
+                <a href="{{ url_for('features') }}" class="solution-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="solution-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="solution-icon"><i class="fas fa-scale-balanced"></i></div>
+                <h3>Compliance & Regulations</h3>
+                <p>Full compliance with legal regulations including KVKK and other applicable legal requirements. Ensure access logs are properly maintained and auditable.</p>
+                <a href="{{ url_for('features') }}" class="solution-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
     </div>
 </section>
 
-<section id="contact" class="contact">
+<!-- Why DNS Security Section -->
+<section class="why-section">
     <div class="container">
-        <h2>Get Started Today</h2>
-        <p>Contact us to learn how DNSFEND can protect your organization</p>
-        <form id="contactForm">
-            <input type="email" id="email" placeholder="Your Email" required>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
-        <div id="response"></div>
+        <div class="why-inner">
+            <div class="why-content">
+                <h2>Why DNS Security Matters</h2>
+                <p>As organizations take major steps toward digital transformation, internet security has become more important than ever. Employees access company resources, accounting and finance software, ERP, SAP, CRM, and other critical systems over the internet.</p>
+                <p>However, during this process, the number of cyber threats faced by organizations is rapidly increasing. These threats bring risks such as data breaches, system disruptions, and the compromise of corporate networks.</p>
+                <p>Providing a secure and uninterrupted digital experience is no longer a luxury — it is a <strong>necessity</strong>.</p>
+            </div>
+            <div class="why-features">
+                <div class="why-feature">
+                    <div class="why-feature-icon"><i class="fas fa-bolt"></i></div>
+                    <div>
+                        <h4>Real-Time Protection</h4>
+                        <p>Instant threat detection and blocking</p>
+                    </div>
+                </div>
+                <div class="why-feature">
+                    <div class="why-feature-icon"><i class="fas fa-eye"></i></div>
+                    <div>
+                        <h4>Complete Visibility</h4>
+                        <p>Full insight into DNS traffic and threats</p>
+                    </div>
+                </div>
+                <div class="why-feature">
+                    <div class="why-feature-icon"><i class="fas fa-gears"></i></div>
+                    <div>
+                        <h4>Easy Integration</h4>
+                        <p>Seamless deployment into existing infrastructure</p>
+                    </div>
+                </div>
+                <div class="why-feature">
+                    <div class="why-feature-icon"><i class="fas fa-chart-pie"></i></div>
+                    <div>
+                        <h4>Detailed Reporting</h4>
+                        <p>Comprehensive analytics and audit trails</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA / Contact Section -->
+<section class="cta-section" id="contact">
+    <div class="container">
+        <div class="cta-inner">
+            <div class="cta-content">
+                <h2>Ready to Get Started?</h2>
+                <p>Schedule a consultation with one of our security experts today to learn more, request a personalized demo, and discover how DNSFEND's comprehensive, proactive DNS security can safeguard your organization.</p>
+            </div>
+            <div class="cta-form">
+                <form id="contactForm">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                </form>
+                <div id="response"></div>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}

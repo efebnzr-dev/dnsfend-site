@@ -3,109 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>DNSFEND Features & Capabilities</title>
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <a href="../index.html"><img src="../static/logos/LOGO_2.svg" alt="DNSFEND Logo" class="logo-img"></a>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <a href="https://www.dnsfend.com" target="_blank"><i class="fas fa-globe"></i> www.dnsfend.com</a>
             </div>
+            <div class="top-bar-right">
+                <a href="mailto:info@dnsfend.com"><i class="fas fa-envelope"></i> info@dnsfend.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-inner">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../static/logos/LOGO_2.svg" alt="DNSFEND Logo" class="logo-img">
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
             <ul class="menu">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../about/index.html">About</a></li>
                 <li><a href="index.html">Features</a></li>
-                <li><a href="../index.html#contact">Contact</a></li>
+                <li><a href="../index.html#contact" class="btn-nav">Contact Us</a></li>
             </ul>
         </div>
     </nav>
 
-    <main class="container">
+    <main>
         
-<section class="features-table">
+<!-- Page Hero -->
+<section class="page-hero">
     <div class="container">
-        <h2>DNSFEND Features & Capabilities</h2>
-        <p class="features-table-subtitle">Comprehensive DNS security solutions tailored for your organization</p>
+        <span class="hero-badge">CAPABILITIES</span>
+        <h1>DNSFEND Features & Capabilities</h1>
+        <p>Comprehensive DNS security solutions tailored for your organization.</p>
     </div>
 </section>
 
-<section class="features-section">
+<!-- Features Sections -->
+<section class="features-detail-section">
     <div class="container">
-        <div class="features-group-title">Threat Detection & Protection</div>
-        <div class="features-table-card">
-            <div class="features-table-icon"></div>
-            <h3>Real-Time Threat Detection</h3>
-            <p>DNSFEND continuously monitors DNS requests and detects threats in real time. Requests containing potential risks are instantly blocked, protecting IT networks from malware, data breaches, and phishing attempts.</p>
+        <div class="features-group">
+            <div class="features-group-header">
+                <div class="features-group-icon"><i class="fas fa-shield-halved"></i></div>
+                <h2>Threat Detection & Protection</h2>
+            </div>
+            <div class="features-detail-grid">
+                <div class="feature-detail-card" data-aos="fade-up">
+                    <div class="fdc-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Real-Time Threat Detection</h3>
+                    <p>DNSFEND continuously monitors DNS requests and detects threats in real time. Requests containing potential risks are instantly blocked, protecting IT networks from malware, data breaches, and phishing attempts.</p>
+                </div>
+                <div class="feature-detail-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="fdc-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Automatic Response</h3>
+                    <p>Automatically block access to malicious domains or redirect users to safe websites. Malicious content is neutralized before it can reach users.</p>
+                </div>
+                <div class="feature-detail-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="fdc-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Secure Internet Experience</h3>
+                    <p>DNSFEND prioritizes security in employees' internet usage. By blocking access to malicious websites, it ensures a safe browsing experience and enables reliable access to IT resources.</p>
+                </div>
+            </div>
         </div>
-        <div class="features-table-card">
-            <div class="features-table-icon"></div>
-            <h3>Automatic Response</h3>
-            <p>Automatically block access to malicious domains or redirect users to safe websites. Malicious content is neutralized before it can reach users.</p>
+
+        <div class="features-group">
+            <div class="features-group-header">
+                <div class="features-group-icon"><i class="fas fa-sliders"></i></div>
+                <h2>Management & Configuration</h2>
+            </div>
+            <div class="features-detail-grid">
+                <div class="feature-detail-card" data-aos="fade-up">
+                    <div class="fdc-icon"><i class="fas fa-desktop"></i></div>
+                    <h3>Centralized Management</h3>
+                    <p>Manage all DNS security settings from a single control panel. Update settings with ease and maintain complete control over your security policies.</p>
+                </div>
+                <div class="feature-detail-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="fdc-icon"><i class="fas fa-puzzle-piece"></i></div>
+                    <h3>Customized Solutions</h3>
+                    <p>DNSFEND is tailored to meet the specific needs of your organization. Configure systems according to users' internet usage habits and unique security requirements.</p>
+                </div>
+            </div>
         </div>
-        <div class="features-table-card">
-            <div class="features-table-icon"></div>
-            <h3>Secure Internet Experience</h3>
-            <p>DNSFEND prioritizes security in employees' internet usage. By blocking access to malicious websites, it ensures a safe browsing experience and enables reliable access to IT resources.</p>
+
+        <div class="features-group">
+            <div class="features-group-header">
+                <div class="features-group-icon"><i class="fas fa-chart-line"></i></div>
+                <h2>Visibility & Reporting</h2>
+            </div>
+            <div class="features-detail-grid">
+                <div class="feature-detail-card" data-aos="fade-up">
+                    <div class="fdc-icon"><i class="fas fa-file-lines"></i></div>
+                    <h3>Comprehensive Reporting</h3>
+                    <p>Get detailed reports on internet traffic, threat detection, and security status analysis. All user access and DNS queries are recorded in detail.</p>
+                </div>
+                <div class="feature-detail-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="fdc-icon"><i class="fas fa-clipboard-check"></i></div>
+                    <h3>Complete Audit Trail</h3>
+                    <p>Detailed insights to analyze the security status of users and servers. Track all activities for thorough security monitoring and analysis.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-group">
+            <div class="features-group-header">
+                <div class="features-group-icon"><i class="fas fa-scale-balanced"></i></div>
+                <h2>Compliance & Security Standards</h2>
+            </div>
+            <div class="features-detail-grid">
+                <div class="feature-detail-card" data-aos="fade-up">
+                    <div class="fdc-icon"><i class="fas fa-certificate"></i></div>
+                    <h3>Compliance Ready</h3>
+                    <p>Full compliance with legal regulations including KVKK (Personal Data Protection Law) and other applicable legal requirements.</p>
+                </div>
+                <div class="feature-detail-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="fdc-icon"><i class="fas fa-gavel"></i></div>
+                    <h3>Legal Obligation Fulfillment</h3>
+                    <p>DNSFEND helps organizations fulfill their legal obligations by ensuring that access logs are properly maintained and auditable.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="features-section">
+<!-- CTA -->
+<section class="cta-section">
     <div class="container">
-        <div class="features-group-title">Management & Configuration</div>
-        <div class="features-table-card">
-            <div class="features-table-icon"></div>
-            <h3>Centralized Management</h3>
-            <p>Manage all DNS security settings from a single control panel. Update settings with ease and maintain complete control over your security policies.</p>
-        </div>
-        <div class="features-table-card">
-            <div class="features-table-icon"></div>
-            <h3>Customized Solutions</h3>
-            <p>DNSFEND is tailored to meet the specific needs of your organization. Configure systems according to users' internet usage habits and unique security requirements.</p>
-        </div>
-    </div>
-</section>
-
-<section class="features-section">
-    <div class="container">
-        <div class="features-group-title">Visibility & Reporting</div>
-        <div class="features-table-card">
-            <div class="features-table-icon"></div>
-            <h3>Comprehensive Reporting</h3>
-            <p>Get detailed reports on internet traffic, threat detection, and security status analysis. All user access and DNS queries are recorded in detail.</p>
-        </div>
-        <div class="features-table-card">
-            <div class="features-table-icon"></div>
-            <h3>Complete Audit Trail</h3>
-            <p>Detailed insights to analyze the security status of users and servers. Track all activities for thorough security monitoring and analysis.</p>
-        </div>
-    </div>
-</section>
-
-<section class="features-section">
-    <div class="container">
-        <div class="features-group-title">Compliance & Security Standards</div>
-        <div class="features-table-card">
-            <div class="features-table-icon"></div>
-            <h3>Compliance Ready</h3>
-            <p>Full compliance with legal regulations including KVKK (Personal Data Protection Law) and other applicable legal requirements.</p>
-        </div>
-        <div class="features-table-card">
-            <div class="features-table-icon"></div>
-            <h3>Legal Obligation Fulfillment</h3>
-            <p>DNSFEND helps organizations fulfill their legal obligations by ensuring that access logs are properly maintained and auditable.</p>
+        <div class="cta-simple">
+            <h2>Ready to Secure Your DNS?</h2>
+            <p>Get started with DNSFEND today and protect your organization from evolving cyber threats.</p>
+            <div class="cta-buttons">
+                <a href="../index.html#contact" class="btn btn-primary">Contact Us</a>
+                <a href="../about/index.html" class="btn btn-outline">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
         </div>
     </div>
 </section>
 
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 DNSFEND. DNS Threat Detection & Protection. All rights reserved.</p>
-            <p><a href="https://www.dnsfend.com" target="_blank">www.dnsfend.com</a></p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="../static/logos/LOGO_2.svg" alt="DNSFEND Logo" class="footer-logo">
+                    <p class="footer-desc">Advanced DNS Threat Detection & Protection for modern organizations. Stay ahead of cyber threats with proactive DNS security.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../about/index.html">About Us</a></li>
+                        <li><a href="index.html">Features</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="index.html">Protective DNS</a></li>
+                        <li><a href="index.html">Threat Detection</a></li>
+                        <li><a href="index.html">Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> info@dnsfend.com</p>
+                    <p><i class="fas fa-globe"></i> www.dnsfend.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 DNSFEND. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
