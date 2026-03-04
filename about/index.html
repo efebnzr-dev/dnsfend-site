@@ -3,44 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>About DNSFEND - DNS Threat Detection & Protection</title>
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <a href="../index.html"><img src="../static/logos/LOGO_2.svg" alt="DNSFEND Logo" class="logo-img"></a>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <a href="https://www.dnsfend.com" target="_blank"><i class="fas fa-globe"></i> www.dnsfend.com</a>
             </div>
+            <div class="top-bar-right">
+                <a href="mailto:info@dnsfend.com"><i class="fas fa-envelope"></i> info@dnsfend.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-inner">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../static/logos/LOGO_2.svg" alt="DNSFEND Logo" class="logo-img">
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
             <ul class="menu">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="index.html">About</a></li>
                 <li><a href="../features/index.html">Features</a></li>
-                <li><a href="../index.html#contact">Contact</a></li>
+                <li><a href="../index.html#contact" class="btn-nav">Contact Us</a></li>
             </ul>
         </div>
     </nav>
 
-    <main class="container">
+    <main>
         
-
-<section class="how-dnsfend-works">
+<!-- Page Hero -->
+<section class="page-hero">
     <div class="container">
-        <h2>How DNSFEND Works</h2>
-        <div class="features-table-grid">
-            <div class="features-table-card">
-                <div class="features-table-icon"></div>
+        <span class="hero-badge">ABOUT US</span>
+        <h1>How DNSFEND Works</h1>
+        <p>Advanced DNS security technology that keeps your organization protected around the clock.</p>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section class="process-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Our Process</h2>
+            <p>Three simple steps to comprehensive DNS security.</p>
+        </div>
+        <div class="process-grid">
+            <div class="process-card" data-aos="fade-up">
+                <div class="process-number">01</div>
+                <div class="process-icon"><i class="fas fa-search"></i></div>
                 <h3>DNS Request Scanning</h3>
                 <p>DNSFEND analyzes all incoming DNS requests in real-time, detecting any malicious or suspicious requests as they occur.</p>
             </div>
-            <div class="features-table-card">
-                <div class="features-table-icon"></div>
+            <div class="process-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="process-number">02</div>
+                <div class="process-icon"><i class="fas fa-shield-halved"></i></div>
                 <h3>Threat Detection & Blocking</h3>
                 <p>When malicious content is detected, the system immediately takes action, blocking these requests and protecting users from reaching unsafe sites.</p>
             </div>
-            <div class="features-table-card">
-                <div class="features-table-icon"></div>
+            <div class="process-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="process-number">03</div>
+                <div class="process-icon"><i class="fas fa-chart-bar"></i></div>
                 <h3>Reporting & Monitoring</h3>
                 <p>Detected threats are recorded in detail and monitored through a centralized management dashboard, allowing continuous security assessment.</p>
             </div>
@@ -48,31 +82,84 @@
     </div>
 </section>
 
-
-            <h2>Protect Your Organization Today</h2>
-            <p>
-                DNSFEND helps organizations secure their digital assets through advanced DNS threat detection and protection. 
-                With real-time threat analysis, automated responses, and comprehensive reporting, you can protect your organization 
-                from evolving DNS-based cyber threats.
-            </p>
-            <p>
-                Don't wait for a breach. Contact us today to see how DNSFEND can secure your network.
-            </p>
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="https://www.dnsfend.com" target="_blank" class="btn btn-primary" style="display: inline-block;">
-                    Visit DNSFEND.com
-                </a>
-                <a href="/#contact" class="btn btn-secondary" style="display: inline-block; margin-left: 1rem;">
-                    Contact Us
-                </a>
+<!-- About Content -->
+<section class="about-detail-section">
+    <div class="container">
+        <div class="about-detail-inner">
+            <div class="about-detail-content">
+                <h2>Protect Your Organization Today</h2>
+                <p>DNSFEND helps organizations secure their digital assets through advanced DNS threat detection and protection. With real-time threat analysis, automated responses, and comprehensive reporting, you can protect your organization from evolving DNS-based cyber threats.</p>
+                <p>Don't wait for a breach. Contact us today to see how DNSFEND can secure your network.</p>
+                <div class="about-detail-buttons">
+                    <a href="https://www.dnsfend.com" target="_blank" class="btn btn-primary">Visit DNSFEND.com</a>
+                    <a href="../index.html#contact" class="btn btn-outline">Contact Us <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
+            <div class="about-detail-stats">
+                <div class="about-stat">
+                    <div class="about-stat-icon"><i class="fas fa-server"></i></div>
+                    <h4>24/7 Monitoring</h4>
+                    <p>Continuous DNS traffic analysis</p>
+                </div>
+                <div class="about-stat">
+                    <div class="about-stat-icon"><i class="fas fa-bolt"></i></div>
+                    <h4>< 1ms Response</h4>
+                    <p>Near-zero latency blocking</p>
+                </div>
+                <div class="about-stat">
+                    <div class="about-stat-icon"><i class="fas fa-globe"></i></div>
+                    <h4>Global Coverage</h4>
+                    <p>Worldwide threat intelligence</p>
+                </div>
+                <div class="about-stat">
+                    <div class="about-stat-icon"><i class="fas fa-lock"></i></div>
+                    <h4>Zero Trust</h4>
+                    <p>Verify every DNS request</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 DNSFEND. DNS Threat Detection & Protection. All rights reserved.</p>
-            <p><a href="https://www.dnsfend.com" target="_blank">www.dnsfend.com</a></p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="../static/logos/LOGO_2.svg" alt="DNSFEND Logo" class="footer-logo">
+                    <p class="footer-desc">Advanced DNS Threat Detection & Protection for modern organizations. Stay ahead of cyber threats with proactive DNS security.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html">About Us</a></li>
+                        <li><a href="../features/index.html">Features</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="../features/index.html">Protective DNS</a></li>
+                        <li><a href="../features/index.html">Threat Detection</a></li>
+                        <li><a href="../features/index.html">Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> info@dnsfend.com</p>
+                    <p><i class="fas fa-globe"></i> www.dnsfend.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 DNSFEND. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
