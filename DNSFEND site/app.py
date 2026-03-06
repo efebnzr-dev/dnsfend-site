@@ -14,10 +14,41 @@ def index():
 def about():
     return render_template('about.html')
 
+
 # Features sayfası
 @app.route('/features/')
 def features():
     return render_template('features.html')
+
+
+# Products sayfası
+@app.route('/products/')
+def products():
+    return render_template('products.html')
+
+
+# Solutions sayfası
+@app.route('/solutions/')
+def solutions():
+    return render_template('solutions.html')
+
+
+# Threats sayfası
+@app.route('/threats/')
+def threats():
+    return render_template('threats.html')
+
+
+# Contact sayfası
+@app.route('/contact/')
+def contact():
+    return render_template('contact.html')
+
+
+# Pricing sayfası
+@app.route('/pricing/')
+def pricing():
+    return render_template('pricing.html')
 
 
 if __name__ == '__main__':

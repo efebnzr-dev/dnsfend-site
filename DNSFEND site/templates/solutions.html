@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block title %}Solutions - DNSFEND | DNS Security Solutions{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero">
+    <div class="container">
+        <span class="hero-badge">SOLUTIONS</span>
+        <h1>DNSFEND Security Solutions</h1>
+        <p>Empowering organizations with advanced threat intelligence and innovative technologies to proactively identify, investigate, and mitigate cyber threats.</p>
+    </div>
+</section>
+
+<!-- Solutions Overview -->
+<section class="solutions-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Tailored Solutions for Every Need</h2>
+            <p>Whether you're a small business or a large enterprise, DNSFEND has solutions designed to fit your security requirements.</p>
+        </div>
+        <div class="solutions-grid">
+            <div class="solution-card" data-aos="fade-up">
+                <div class="solution-icon"><i class="fas fa-building-shield"></i></div>
+                <h3>Enterprise DNS Protection</h3>
+                <p>Comprehensive DNS security solutions for large organizations. Protect all endpoints and ensure safe internet access across your entire infrastructure. Scale your security as your organization grows.</p>
+                <ul class="solution-features-list">
+                    <li><i class="fas fa-check"></i> Multi-site deployment</li>
+                    <li><i class="fas fa-check"></i> Centralized policy management</li>
+                    <li><i class="fas fa-check"></i> Custom threat intelligence feeds</li>
+                    <li><i class="fas fa-check"></i> Dedicated support team</li>
+                </ul>
+                <a href="{{ url_for('features') }}" class="solution-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="solution-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="solution-icon"><i class="fas fa-user-shield"></i></div>
+                <h3>Threat Investigation</h3>
+                <p>Our threat investigation solution is expertly designed to swiftly identify, analyze, and respond to security incidents to safeguard your digital infrastructure.</p>
+                <ul class="solution-features-list">
+                    <li><i class="fas fa-check"></i> Real-time threat analysis</li>
+                    <li><i class="fas fa-check"></i> Historical DNS data access</li>
+                    <li><i class="fas fa-check"></i> Automated incident response</li>
+                    <li><i class="fas fa-check"></i> Forensic investigation tools</li>
+                </ul>
+                <a href="{{ url_for('features') }}" class="solution-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="solution-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="solution-icon"><i class="fas fa-scale-balanced"></i></div>
+                <h3>Compliance & Regulations</h3>
+                <p>Full compliance with legal regulations including KVKK and other applicable legal requirements. Ensure access logs are properly maintained and auditable.</p>
+                <ul class="solution-features-list">
+                    <li><i class="fas fa-check"></i> KVKK compliance</li>
+                    <li><i class="fas fa-check"></i> GDPR readiness</li>
+                    <li><i class="fas fa-check"></i> Automated audit reports</li>
+                    <li><i class="fas fa-check"></i> Data retention policies</li>
+                </ul>
+                <a href="{{ url_for('features') }}" class="solution-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Industry Solutions -->
+<section class="industry-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Industry-Specific Solutions</h2>
+            <p>DNSFEND understands that every industry has unique security challenges. Our solutions are tailored for specific verticals.</p>
+        </div>
+        <div class="industry-grid">
+            <div class="industry-card" data-aos="fade-up">
+                <div class="industry-icon"><i class="fas fa-university"></i></div>
+                <h3>Financial Services</h3>
+                <p>Protect banking and financial systems from DNS-based attacks. Meet regulatory requirements while securing customer data and transactions.</p>
+            </div>
+            <div class="industry-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="industry-icon"><i class="fas fa-hospital"></i></div>
+                <h3>Healthcare</h3>
+                <p>Safeguard patient data and healthcare systems. Ensure HIPAA compliance while maintaining uninterrupted access to critical medical resources.</p>
+            </div>
+            <div class="industry-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="industry-icon"><i class="fas fa-graduation-cap"></i></div>
+                <h3>Education</h3>
+                <p>Protect students, staff, and institutional data. Filter inappropriate content and block cyber threats across campus networks.</p>
+            </div>
+            <div class="industry-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="industry-icon"><i class="fas fa-landmark"></i></div>
+                <h3>Government</h3>
+                <p>Meet strict government security standards. Protect critical infrastructure and sensitive data from state-sponsored and criminal cyber threats.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-simple">
+            <h2>Find the Right Solution for Your Organization</h2>
+            <p>Contact our team to discuss your specific requirements and get a tailored security plan.</p>
+            <div class="cta-buttons">
+                <a href="{{ url_for('contact') }}" class="btn btn-primary">Contact Us</a>
+                <a href="{{ url_for('pricing') }}" class="btn btn-outline">View Pricing <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

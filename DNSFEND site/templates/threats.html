@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+
+{% block title %}DNS Threats - DNSFEND | Understanding DNS-Based Cyber Threats{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-hero page-hero-dark">
+    <div class="container">
+        <span class="hero-badge">THREAT INTELLIGENCE</span>
+        <h1>DNS-Based Cyber Threats</h1>
+        <p>DNS plays a vital role in managing internet traffic and unfortunately becomes a target for many cyberattacks. Understanding these threats is the first step toward protection.</p>
+    </div>
+</section>
+
+<!-- Threat Overview -->
+<section class="threats-section">
+    <div class="container">
+        <div class="section-header light">
+            <h2>Common DNS Attack Vectors</h2>
+            <p>If DNS attacks are not prevented, they put your network security and personal data at risk. Here are the most common threats organizations face.</p>
+        </div>
+        <div class="threats-grid">
+            <div class="threat-card" data-aos="fade-up">
+                <div class="threat-icon"><i class="fas fa-filter"></i></div>
+                <h3>DNS Tunneling</h3>
+                <p>Cybercriminals use DNS tunneling to transport malicious data and enable data theft. This technique exploits DNS to exfiltrate sensitive information by encoding data within DNS queries and responses.</p>
+            </div>
+            <div class="threat-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="threat-icon"><i class="fas fa-skull-crossbones"></i></div>
+                <h3>DNS Poisoning</h3>
+                <p>DNS poisoning (cache poisoning) redirects users to fraudulent websites to steal credentials. Users are deceived into visiting fake sites that appear legitimate, leading to credential theft.</p>
+            </div>
+            <div class="threat-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="threat-icon"><i class="fas fa-fish"></i></div>
+                <h3>Phishing Attacks</h3>
+                <p>Phishing attacks lure users to deceptive websites to obtain personal information. These targeted attacks often appear to come from trusted sources, making them difficult to detect.</p>
+            </div>
+            <div class="threat-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="threat-icon"><i class="fas fa-robot"></i></div>
+                <h3>Botnet Command & Control</h3>
+                <p>Compromised machines communicate with command and control servers via DNS. These botnets can be used for DDoS attacks, spam distribution, and large-scale data theft.</p>
+            </div>
+            <div class="threat-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="threat-icon"><i class="fas fa-virus"></i></div>
+                <h3>Malware Distribution</h3>
+                <p>Malware-hosting servers use DNS to deliver infections. Attackers register malicious domains to distribute trojans, spyware, and other harmful software to unsuspecting users.</p>
+            </div>
+            <div class="threat-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="threat-icon"><i class="fas fa-lock"></i></div>
+                <h3>Ransomware Attacks</h3>
+                <p>Ransomware uses DNS to contact command centers, download encryption keys, and report successful infections. Blocking DNS communication can stop ransomware in its tracks.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Threat Statistics -->
+<section class="stats-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>The Growing Threat Landscape</h2>
+            <p>Cyber threats continue to evolve and grow in both sophistication and frequency.</p>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-card" data-aos="fade-up">
+                <div class="stat-number" data-target="5000000">$ 0</div>
+                <div class="stat-label">Average cost of a data breach</div>
+            </div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="stat-number" data-target="72">0 %</div>
+                <div class="stat-label">Increase in data breaches since 2023</div>
+            </div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-number" data-target="12000000000000">$ 0</div>
+                <div class="stat-label">Projected cost of cyber crime in 2025</div>
+            </div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="stat-number" data-target="10000000000">$ 0</div>
+                <div class="stat-label">Cost of cyber fraud losses / year</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why DNS Security Section -->
+<section class="why-section">
+    <div class="container">
+        <div class="why-inner">
+            <div class="why-content">
+                <h2>Why DNS Security Matters</h2>
+                <p>As organizations take major steps toward digital transformation, internet security has become more important than ever. Employees access company resources, accounting and finance software, ERP, SAP, CRM, and other critical systems over the internet.</p>
+                <p>However, during this process, the number of cyber threats faced by organizations is rapidly increasing. These threats bring risks such as data breaches, system disruptions, and the compromise of corporate networks.</p>
+                <p>Providing a secure and uninterrupted digital experience is no longer a luxury — it is a <strong>necessity</strong>.</p>
+            </div>
+            <div class="why-features">
+                <div class="why-feature">
+                    <div class="why-feature-icon"><i class="fas fa-bolt"></i></div>
+                    <div>
+                        <h4>Real-Time Protection</h4>
+                        <p>Instant threat detection and blocking</p>
+                    </div>
+                </div>
+                <div class="why-feature">
+                    <div class="why-feature-icon"><i class="fas fa-eye"></i></div>
+                    <div>
+                        <h4>Complete Visibility</h4>
+                        <p>Full insight into DNS traffic and threats</p>
+                    </div>
+                </div>
+                <div class="why-feature">
+                    <div class="why-feature-icon"><i class="fas fa-gears"></i></div>
+                    <div>
+                        <h4>Easy Integration</h4>
+                        <p>Seamless deployment into existing infrastructure</p>
+                    </div>
+                </div>
+                <div class="why-feature">
+                    <div class="why-feature-icon"><i class="fas fa-chart-pie"></i></div>
+                    <div>
+                        <h4>Detailed Reporting</h4>
+                        <p>Comprehensive analytics and audit trails</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How DNSFEND Helps -->
+<section class="process-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>How DNSFEND Protects You</h2>
+            <p>Our multi-layered approach ensures comprehensive protection against all DNS-based threats.</p>
+        </div>
+        <div class="process-grid">
+            <div class="process-card" data-aos="fade-up">
+                <div class="process-number">01</div>
+                <div class="process-icon"><i class="fas fa-eye"></i></div>
+                <h3>Detect</h3>
+                <p>Advanced algorithms analyze every DNS query in real-time, identifying suspicious patterns, known malicious domains, and zero-day threats.</p>
+            </div>
+            <div class="process-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="process-number">02</div>
+                <div class="process-icon"><i class="fas fa-shield-halved"></i></div>
+                <h3>Block</h3>
+                <p>Malicious DNS requests are immediately blocked before they can reach your network, preventing data exfiltration and malware downloads.</p>
+            </div>
+            <div class="process-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="process-number">03</div>
+                <div class="process-icon"><i class="fas fa-chart-bar"></i></div>
+                <h3>Report</h3>
+                <p>Every blocked threat is logged and reported in detail, giving your security team complete visibility into the threat landscape.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-simple">
+            <h2>Don't Wait for a Breach</h2>
+            <p>Start protecting your organization from DNS-based threats today. Schedule a consultation with our security experts.</p>
+            <div class="cta-buttons">
+                <a href="{{ url_for('contact') }}" class="btn btn-primary">Contact Us</a>
+                <a href="{{ url_for('products') }}" class="btn btn-outline">Explore Products <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

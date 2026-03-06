@@ -185,4 +185,30 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // ===== FAQ Accordion =====
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        if (question) {
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                // Close all other FAQ items
+                faqItems.forEach(other => other.classList.remove('active'));
+                // Toggle current
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        }
+    });
+
+    // ===== Active Nav Link Highlighting =====
+    const currentPath = window.location.pathname;
+    document.querySelectorAll('.menu li a').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && currentPath === href) {
+            link.style.color = 'var(--secondary)';
+        }
+    });
+
 });

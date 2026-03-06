@@ -9,5 +9,15 @@ app.config['FREEZER_DEFAULT_MIMETYPE'] = 'text/html'
 
 freezer = Freezer(app)
 
+
+@freezer.register_generator
+def product_pages():
+    yield 'products', {}
+    yield 'solutions', {}
+    yield 'threats', {}
+    yield 'contact', {}
+    yield 'pricing', {}
+
+
 if __name__ == '__main__':
     freezer.freeze()

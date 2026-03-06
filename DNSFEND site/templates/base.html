@@ -35,8 +35,17 @@
             <ul class="menu">
                 <li><a href="{{ url_for('index') }}">Home</a></li>
                 <li><a href="{{ url_for('about') }}">About</a></li>
-                <li><a href="{{ url_for('features') }}">Features</a></li>
-                <li><a href="{{ url_for('index') }}#contact" class="btn-nav">Contact Us</a></li>
+                <li class="has-dropdown">
+                    <a href="{{ url_for('products') }}">Products <i class="fas fa-chevron-down fa-xs"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="{{ url_for('products') }}">All Products</a></li>
+                        <li><a href="{{ url_for('features') }}">Features</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ url_for('solutions') }}">Solutions</a></li>
+                <li><a href="{{ url_for('threats') }}">Threats</a></li>
+                <li><a href="{{ url_for('pricing') }}">Pricing</a></li>
+                <li><a href="{{ url_for('contact') }}" class="btn-nav">Contact Us</a></li>
             </ul>
         </div>
     </nav>
@@ -62,15 +71,16 @@
                     <ul>
                         <li><a href="{{ url_for('about') }}">About Us</a></li>
                         <li><a href="{{ url_for('features') }}">Features</a></li>
-                        <li><a href="{{ url_for('index') }}#contact">Contact</a></li>
+                        <li><a href="{{ url_for('pricing') }}">Pricing</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Solutions</h4>
                     <ul>
-                        <li><a href="{{ url_for('features') }}">Protective DNS</a></li>
-                        <li><a href="{{ url_for('features') }}">Threat Detection</a></li>
-                        <li><a href="{{ url_for('features') }}">Compliance</a></li>
+                        <li><a href="{{ url_for('products') }}">Products</a></li>
+                        <li><a href="{{ url_for('solutions') }}">Solutions</a></li>
+                        <li><a href="{{ url_for('threats') }}">Threat Intelligence</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
