@@ -45,11 +45,5 @@ def contact():
     return render_template('contact.html')
 
 
-# Pricing sayfası
-@app.route('/pricing/')
-def pricing():
-    return render_template('pricing.html')
-
-
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)

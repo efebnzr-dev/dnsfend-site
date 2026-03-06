@@ -16,7 +16,6 @@ def product_pages():
     yield 'solutions', {}
     yield 'threats', {}
     yield 'contact', {}
-    yield 'pricing', {}
 
 
 if __name__ == '__main__':
