@@ -123,16 +123,17 @@ a {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
 }
 
 .menu li a {
     color: var(--text);
     font-weight: 500;
-    font-size: 0.925rem;
-    padding: 8px 16px;
+    font-size: 0.875rem;
+    padding: 8px 12px;
     border-radius: var(--radius-sm);
     transition: var(--transition);
+    white-space: nowrap;
 }
 
 .menu li a:hover {
@@ -143,9 +144,10 @@ a {
 .btn-nav {
     background: var(--primary) !important;
     color: #fff !important;
-    padding: 10px 24px !important;
+    padding: 8px 20px !important;
     border-radius: var(--radius-sm) !important;
     font-weight: 600 !important;
+    font-size: 0.875rem !important;
 }
 
 .btn-nav:hover {
